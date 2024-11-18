@@ -4,7 +4,7 @@ import {Component} from '@angular/core';
  * @author Bruno Ramirez
  */
 @Component({
-  selector: 'links-custom',
+  selector: 'app-links-custom',
   standalone: true,
   imports: [],
   templateUrl: './links-custom.component.html',

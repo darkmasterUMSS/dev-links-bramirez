@@ -4,7 +4,7 @@ import {Component} from '@angular/core';
  * @author Bruno Ramirez
  */
 @Component({
-  selector: 'links-preview',
+  selector: 'app-links-preview',
   standalone: true,
   imports: [],
   templateUrl: './links-preview.component.html',

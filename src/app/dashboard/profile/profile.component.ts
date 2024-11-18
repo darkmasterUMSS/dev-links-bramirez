@@ -4,7 +4,7 @@ import {Component} from '@angular/core';
  * @author Bruno Ramirez
  */
 @Component({
-  selector: 'profile',
+  selector: 'app-profile',
   standalone: true,
   imports: [],
   templateUrl: './profile.component.html',
