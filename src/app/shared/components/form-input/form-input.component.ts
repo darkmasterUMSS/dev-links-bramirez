@@ -1,20 +1,59 @@
-import {Component, input, InputSignal} from '@angular/core';
+import {Component, forwardRef, input, InputSignal} from '@angular/core';
 import {InputType} from "../../enums/input-type.enum";
-import {EMPTY_STRING} from "../../constants/constants";
+import {ControlValueAccessor, NG_VALUE_ACCESSOR, ReactiveFormsModule} from '@angular/forms';
 
+/**
+ * @author Bruno Ramirez
+ */
 @Component({
   selector: 'app-form-input',
   standalone: true,
-  imports: [],
+  imports: [
+    ReactiveFormsModule
+  ],
   templateUrl: './form-input.component.html',
-  styleUrl: './form-input.component.scss'
+  styleUrl: './form-input.component.scss',
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() => FormInputComponent),
+      multi: true,
+    },
+  ],
 })
-export class FormInputComponent {
-  public iconPath: InputSignal<string> = input<string>(EMPTY_STRING);
-  public name: InputSignal<string> = input.required<string>(EMPTY_STRING);
-  public placeholder: InputSignal<string> = input.required<string>(EMPTY_STRING);
-  public type: InputSignal<InputType> = input<InputType>(InputType.Text);
+export class FormInputComponent implements ControlValueAccessor {
+  public description: InputSignal<string> = input<string>('');
+  public formControlName: InputSignal<any> = input.required<any>();
+  public iconPath: InputSignal<string> = input<string>('');
+  public name: InputSignal<string> = input.required<string>();
+  public placeholder: InputSignal<string> = input.required<string>();
+  public type: InputSignal<InputType> = input.required<InputType>();
 
-  constructor() {
+  public disabled: boolean = false;
+  public value: any = '';
+  public onChange: any = () => {};
+  public onTouched: any = () => {};
+
+  public registerOnChange(fn: any): void {
+    this.onChange = fn;
+  }
+
+  public registerOnTouched(fn: any): void {
+    this.onTouched = fn;
+  }
+
+  public writeValue(value: any): void {
+    this.value = value;
+  }
+
+  public handleInput(event: Event): void {
+    const target = event.target as HTMLInputElement;
+    this.value = target.value;
+    console.log('this.value', this.value);
+    this.onChange(target.value);
+  }
+
+  public handleBlur(): void {
+    this.onTouched();
   }
 }

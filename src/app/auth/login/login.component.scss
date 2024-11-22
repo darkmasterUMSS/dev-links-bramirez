@@ -1,0 +1,38 @@
+:host {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  gap: 51px;
+  width: 476px; //Make responsive
+  height: 573px;
+  align-items: center;
+
+  .login-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color: #ffffff;
+    height: 100%;
+    width: 100%;
+    padding: 40px;
+  }
+
+  .login-form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .login-form-message-error {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #ff0000;
+  }
+}

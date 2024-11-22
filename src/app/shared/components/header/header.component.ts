@@ -1,6 +1,9 @@
 import {Component, input, InputSignal} from '@angular/core';
 import {EMPTY_STRING} from "../../constants/constants";
 
+/**
+ * @author Bruno Ramirez
+ */
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -9,9 +12,6 @@ import {EMPTY_STRING} from "../../constants/constants";
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  public subTitle: InputSignal<string> = input<string>(EMPTY_STRING);
-  public title: InputSignal<string> = input.required<string>(EMPTY_STRING);
-
-  constructor() {
-  }
+  public subTitle: InputSignal<string> = input<string>('');
+  public title: InputSignal<string> = input.required<string>();
 }

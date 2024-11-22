@@ -1,0 +1,15 @@
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 7.5px;
+
+  .logo-img {
+    padding: 3.335px;
+  }
+
+  .logo-name {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+  }
+}

@@ -1,19 +1,54 @@
-<article>
+<article class="login-container">
   <app-logo></app-logo>
 
-  <section>
+  <section class="login-content">
     <app-header title="Login"
                 subTitle="Add your details below to get back into the app">
     </app-header>
 
-    <div>
-      <app-form-input></app-form-input>
+    <form class="login-form-container"
+          [formGroup]="loginForm"
+          (ngSubmit)="login()">
 
-      <app-form-input></app-form-input>
+      <app-form-input
+        iconPath="dev-links-icon-arrow"
+        description="Email address"
+        name="email"
+        placeholder="e.g.alex@email.com"
+        [type]="INPUT_TYPE.Email"
+        formControlName="email">
+      </app-form-input>
+      <span
+        class="login-form-message-error"
+        formErrorLabel
+        [errors]="loginForm.get('email')?.errors"
+        *ngIf="loginForm.get('email')?.dirty || submitted">
+      </span>
 
-      <app-button></app-button>
+      <app-form-input
+        iconPath="dev-links-icon-github"
+        description="Password"
+        name="password"
+        placeholder="Your password"
+        [type]="INPUT_TYPE.Password"
+        formControlName="password">
+      </app-form-input>
+      <span
+        class="login-form-message-error"
+        formErrorLabel
+        [errors]="loginForm.get('password')?.errors"
+        *ngIf="loginForm.get('password')?.dirty || submitted">
+      </span>
 
-      <label>Don’t have an account? Create account</label>
-    </div>
+      <app-button title="Login"
+                  type="submit"
+                  [disabled]="loginForm.invalid">
+      </app-button>
+
+      <app-form-footer description="Don’t have an account?"
+                       action="Create account"
+                       (onClickEvent)="navigateToRegister()">
+      </app-form-footer>
+    </form>
   </section>
 </article>

@@ -1,1 +1,45 @@
-<p>register works!</p>
+<article class="register-container">
+  <app-logo></app-logo>
+
+  <section class="register-content">
+    <app-header title="Create account"
+                subTitle="Let's get you started sharing your links!">
+    </app-header>
+
+    <form class="register-form-container"
+          [formGroup]="registerForm"
+          (ngSubmit)="createNewAccount()">
+      <app-form-input iconPath="dev-links-icon-arrow"
+                      name="Email address"
+                      placeholder="e.g.alex@email.com"
+                      [type]="INPUT_TYPE.Email"
+                      formControlName="email">
+      </app-form-input>
+
+      <app-form-input iconPath="dev-links-icon-github"
+                      name="Create password"
+                      placeholder="At least 8 characters"
+                      [type]="INPUT_TYPE.Password"
+                      formControlName="password">
+      </app-form-input>
+
+      <app-form-input iconPath="dev-links-icon-github"
+                      name="Confirm password"
+                      placeholder="At least 8 characters"
+                      [type]="INPUT_TYPE.Password"
+                      formControlName="password">
+      </app-form-input>
+
+      <label class="register-form-message-error">Password must contain at least 8 characters</label>
+
+      <app-button title="Create new account"
+                  type="submit">
+      </app-button>
+
+      <app-form-footer description="Already have an account?"
+                       action="Login"
+                       (onClickEvent)="navigateToLogin()">
+      </app-form-footer>
+    </form>
+  </section>
+</article>
