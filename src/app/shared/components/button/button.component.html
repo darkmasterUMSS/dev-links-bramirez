@@ -1,6 +1,11 @@
-<button class="button-container"
+<button class="btn-container"
         (click)="onClick()"
         [type]="type()"
         [disabled]="disabled()">
-  {{ title() }}
+  @if (iconPath()) {
+    <span class="btn-icon"
+          [class]="'btn-icon ' + iconPath()">
+    </span>
+  }
+  <label class="btn-text">{{ title() }}</label>
 </button>

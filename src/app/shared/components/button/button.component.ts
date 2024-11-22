@@ -1,4 +1,4 @@
-import {Component, input, InputSignal, output, OutputEmitterRef} from '@angular/core';
+import {Component, input, InputSignal, output, OutputEmitterRef, ViewEncapsulation} from '@angular/core';
 
 /**
  * @author Bruno Ramirez
@@ -8,12 +8,15 @@ import {Component, input, InputSignal, output, OutputEmitterRef} from '@angular/
   standalone: true,
   imports: [],
   templateUrl: './button.component.html',
-  styleUrl: './button.component.scss'
+  styleUrl: './button.component.scss',
+  encapsulation: ViewEncapsulation.None
+
 })
 export class ButtonComponent {
   public title: InputSignal<string> = input.required<string>();
-  public type: InputSignal<string> = input.required<string>();
+  public type: InputSignal<string> = input<string>('button');
   public disabled: InputSignal<boolean> = input<boolean>(false);
+  public iconPath: InputSignal<string> = input<string>('');
 
   public onClickEvent: OutputEmitterRef<void> = output<void>();
 

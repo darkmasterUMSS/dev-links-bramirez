@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {NavbarComponent} from '../../shared/components/navbar/navbar.component';
 
 /**
  * @author Bruno Ramirez
@@ -6,7 +7,9 @@ import {Component} from '@angular/core';
 @Component({
   selector: 'app-links-custom',
   standalone: true,
-  imports: [],
+  imports: [
+    NavbarComponent
+  ],
   templateUrl: './links-custom.component.html',
   styleUrl: './links-custom.component.scss'
 })

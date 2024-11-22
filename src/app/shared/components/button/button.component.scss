@@ -1,14 +1,17 @@
-.button-container {
+.btn-container {
   border-radius: 8px;
   padding: 11px 27px 11px 27px;
   width: 100%;
   background-color: #633CFF;
   border: none;
-  font-family: 'Instrument Sans', sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  color: #ffffff;
   cursor: pointer;
+
+  .btn-text {
+    color: #ffffff;
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+  }
 
   &:disabled {
     opacity: 0.5;
