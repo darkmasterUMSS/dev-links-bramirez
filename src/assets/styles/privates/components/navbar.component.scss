@@ -1,0 +1,46 @@
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--white-color);
+  padding: 16px 16px 16px 24px;
+  border-radius: 12px;
+
+  .navbar-content {
+    &-left {
+    }
+
+    &-mid {
+      display: flex;
+      gap: 16px;
+
+      .btn-container {
+        background-color: var(--white-color);
+
+        .btn-text,
+        .btn-icon {
+          color: var(--steel-gray-color);
+        }
+
+        &:hover {
+          background-color: var(--lavender-mist-color);
+
+          .btn-text,
+          .btn-icon {
+            color: var(--royal-purple-color);
+          }
+        }
+      }
+    }
+
+    &-right {
+      .btn-container {
+        background-color: var(--white-color);
+        border: 1px solid var(--royal-purple-color);
+
+        .btn-text {
+          color: var(--royal-purple-color);
+        }
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import {Component, ViewEncapsulation} from '@angular/core';
+import {ChangeDetectionStrategy, Component, ViewEncapsulation} from '@angular/core';
 import {LogoComponent} from '../logo/logo.component';
 import {ButtonComponent} from '../button/button.component';
 
@@ -13,8 +13,8 @@ import {ButtonComponent} from '../button/button.component';
     ButtonComponent
   ],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss',
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavbarComponent {
 

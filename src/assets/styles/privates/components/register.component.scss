@@ -5,34 +5,42 @@
   align-items: center;
 }
 
-.login-container {
+.register-container {
   display: flex;
   flex-direction: column;
   gap: 51px;
   width: 476px; //Make responsive
-  height: 573px;
+  height: 618px;
   align-items: center;
 
-  .login-content {
+  .register-content {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    background-color: #ffffff;
+    background-color: var(--white-color);
     height: 100%;
     width: 100%;
     padding: 40px;
   }
 
-  .login-form-container {
+  .register-form-container {
     display: flex;
     flex-direction: column;
     gap: 24px;
+
+    .dev-links-icon-email {
+      font-size: 10px;
+    }
+
+    .dev-links-icon-candied {
+      font-size: 14px;
+    }
   }
 
-  .login-form-message-error {
-    font-family: 'Instrument Sans', sans-serif;
+  .register-form-message-error {
+    font-family: var(--instruments-sans-font), sans-serif;
     font-size: 12px;
     font-weight: 400;
-    color: #ff0000;
+    color: var(--steel-gray-color);
   }
 }

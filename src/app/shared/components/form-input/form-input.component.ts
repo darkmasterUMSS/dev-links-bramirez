@@ -1,4 +1,4 @@
-import {Component, forwardRef, input, InputSignal} from '@angular/core';
+import {ChangeDetectionStrategy, Component, forwardRef, input, InputSignal, ViewEncapsulation} from '@angular/core';
 import {InputType} from "../../enums/input-type.enum";
 import {ControlValueAccessor, NG_VALUE_ACCESSOR, ReactiveFormsModule} from '@angular/forms';
 
@@ -12,7 +12,8 @@ import {ControlValueAccessor, NG_VALUE_ACCESSOR, ReactiveFormsModule} from '@ang
     ReactiveFormsModule
   ],
   templateUrl: './form-input.component.html',
-  styleUrl: './form-input.component.scss',
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,

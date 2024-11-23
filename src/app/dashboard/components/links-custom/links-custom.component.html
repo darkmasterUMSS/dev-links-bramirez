@@ -1,0 +1,36 @@
+<article class="links-custom-container">
+  <app-navbar></app-navbar>
+
+  <section class="links-custom-content">
+    <div class="links-custom-content-left">
+      <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+        @for (movie of movies; track movie) {
+<!--          <div class="example-box" cdkDrag>{{movie}}</div>-->
+
+<!--          <app-links-card class="example-box" cdkDrag></app-links-card>-->
+        }
+      </div>
+    </div>
+
+    <div class="links-custom-content-right">
+      <div class="links-custom-content-right-form">
+        <app-header title="Customize your links"
+                    subTitle="Add/edit/remove links below and then share all your profiles with the world!">
+        </app-header>
+
+        <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+          @for (movie of [1]; track movie) {
+<!--            <div class="example-box" cdkDrag>{{movie}}</div>-->
+
+            <app-links-card class="example-box" cdkDrag></app-links-card>
+          }
+        </div>
+      </div>
+
+      <app-button class="links-custom-content-right-btn-submit"
+                  title="Save"
+                  (onClickEvent)="saveLinks()">
+      </app-button>
+    </div>
+  </section>
+</article>

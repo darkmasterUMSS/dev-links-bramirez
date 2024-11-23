@@ -1,4 +1,12 @@
-import {Component, input, InputSignal, output, OutputEmitterRef, ViewEncapsulation} from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  input,
+  InputSignal,
+  output,
+  OutputEmitterRef,
+  ViewEncapsulation
+} from '@angular/core';
 
 /**
  * @author Bruno Ramirez
@@ -8,9 +16,9 @@ import {Component, input, InputSignal, output, OutputEmitterRef, ViewEncapsulati
   standalone: true,
   imports: [],
   templateUrl: './button.component.html',
-  styleUrl: './button.component.scss',
-  encapsulation: ViewEncapsulation.None
-
+  styleUrl: '../../../../assets/styles/privates/components/button.component.scss',
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ButtonComponent {
   public title: InputSignal<string> = input.required<string>();

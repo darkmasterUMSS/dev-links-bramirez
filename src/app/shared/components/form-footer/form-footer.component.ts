@@ -1,4 +1,12 @@
-import {Component, input, InputSignal, output, OutputEmitterRef} from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  input,
+  InputSignal,
+  output,
+  OutputEmitterRef,
+  ViewEncapsulation
+} from '@angular/core';
 
 /**
  * @author Bruno Ramirez
@@ -8,7 +16,8 @@ import {Component, input, InputSignal, output, OutputEmitterRef} from '@angular/
   standalone: true,
   imports: [],
   templateUrl: './form-footer.component.html',
-  styleUrl: './form-footer.component.scss'
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FormFooterComponent {
   public description: InputSignal<string> = input<string>('');

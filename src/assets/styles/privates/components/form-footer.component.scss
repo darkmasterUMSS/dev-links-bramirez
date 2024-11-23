@@ -6,7 +6,7 @@
   justify-content: center;
 
   .form-footer-description, .form-footer-action {
-    font-family: 'Instrument Sans', sans-serif;
+    font-family: var(--instruments-sans-font), sans-serif;
     font-size: 16px;
     font-weight: 400;
   }
@@ -16,7 +16,7 @@
   }
 
   .form-footer-action {
-    color: #633CFF;
+    color: var(--royal-purple-color);
     cursor: pointer;
     border: none;
     background: none;

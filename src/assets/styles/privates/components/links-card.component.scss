@@ -1,0 +1,129 @@
+.links-card-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 12px;
+
+  .links-card-header {
+    display: flex;
+    justify-content: space-between;
+
+    div {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      .dev-links-icon-hamburger {
+        font-size: 6px;
+      }
+
+      .links-card-title {
+        font-family: var(--instruments-sans-font), sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--steel-gray-color);
+      }
+    }
+
+    .links-card-btn-remove {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: var(--instruments-sans-font), sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--steel-gray-color);
+    }
+  }
+
+  .links-card-platform {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    &-text {
+      font-family: var(--instruments-sans-font), sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--dark-gray-color);
+    }
+
+    &-select {
+
+    }
+
+    &-options {
+      width: 100%;
+    }
+  }
+}
+
+/* Contenedor del dropdown */
+.custom-select {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+}
+
+/* Trigger para mostrar el valor seleccionado */
+.custom-select-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.custom-select-arrow {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #737373;
+  margin-left: 10px;
+}
+
+/* Opciones ocultas inicialmente */
+.custom-options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.custom-option {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.custom-option:hover {
+  background-color: #f5f5f5;
+}
+
+/* Mostrar opciones cuando está activo */
+.custom-select.active .custom-options {
+  display: block;
+}
+
+.custom-option span {
+  margin-right: 10px;
+}
+

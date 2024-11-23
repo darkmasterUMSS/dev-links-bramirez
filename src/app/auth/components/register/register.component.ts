@@ -1,10 +1,10 @@
-import {Component, inject} from '@angular/core';
-import {ButtonComponent} from "../../shared/components/button/button.component";
-import {FormFooterComponent} from "../../shared/components/form-footer/form-footer.component";
-import {FormInputComponent} from "../../shared/components/form-input/form-input.component";
-import {HeaderComponent} from "../../shared/components/header/header.component";
-import {LogoComponent} from "../../shared/components/logo/logo.component";
-import {InputType} from '../../shared/enums/input-type.enum';
+import {ChangeDetectionStrategy, Component, inject, ViewEncapsulation} from '@angular/core';
+import {ButtonComponent} from "../../../shared/components/button/button.component";
+import {FormFooterComponent} from "../../../shared/components/form-footer/form-footer.component";
+import {FormInputComponent} from "../../../shared/components/form-input/form-input.component";
+import {HeaderComponent} from "../../../shared/components/header/header.component";
+import {LogoComponent} from "../../../shared/components/logo/logo.component";
+import {InputType} from '../../../shared/enums/input-type.enum';
 import {Router} from '@angular/router';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 
@@ -23,7 +23,15 @@ import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/
     ReactiveFormsModule
   ],
   templateUrl: './register.component.html',
-  styleUrl: './register.component.scss'
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    style:
+      'display: flex;' +
+      'align-items: center;' +
+      'justify-content: center;' +
+      'height: 100vh;'
+  }
 })
 export class RegisterComponent {
   public formBuilder: FormBuilder = inject(FormBuilder);

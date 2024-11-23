@@ -1,18 +1,20 @@
-<div class="form-input-container">
+<article class="form-input-container">
   <label class="form-input-name">{{ description() }}</label>
 
-  <input class="form-input"
-         [name]="name()"
-         [type]="type()"
-         [placeholder]="placeholder()"
-         [value]="value"
-         [disabled]="disabled"
-         (input)="handleInput($event)"
-         (blur)="handleBlur()" />
-
-  @if (iconPath()) {
-    <span class="form-input-icon"
-          [class]="iconPath()">
+  <section class="form-input-wrapper">
+    @if (iconPath()) {
+      <span class="form-input-icon"
+            [class]="iconPath()">
     </span>
-  }
-</div>
+    }
+
+    <input class="form-input"
+           [name]="name()"
+           [type]="type()"
+           [placeholder]="placeholder()"
+           [value]="value"
+           [disabled]="disabled"
+           (input)="handleInput($event)"
+           (blur)="handleBlur()" />
+  </section>
+</article>

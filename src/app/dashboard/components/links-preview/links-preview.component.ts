@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component, ViewEncapsulation} from '@angular/core';
 
 /**
  * @author Bruno Ramirez
@@ -8,7 +8,8 @@ import {Component} from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './links-preview.component.html',
-  styleUrl: './links-preview.component.scss'
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LinksPreviewComponent {
 
