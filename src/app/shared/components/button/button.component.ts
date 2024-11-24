@@ -16,7 +16,7 @@ import {
   standalone: true,
   imports: [],
   templateUrl: './button.component.html',
-  styleUrl: '../../../../assets/styles/privates/components/button.component.scss',
+  styleUrl: '../../../../assets/styles/privates/components/_button.component.scss',
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush
 })

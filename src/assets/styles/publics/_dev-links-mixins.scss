@@ -1,0 +1,23 @@
+@mixin btn-secondary-colors {
+  .btn-container {
+    background-color: var(--white-color);
+    border: 1px solid var(--royal-purple-color);
+
+    .btn-text {
+      color: var(--royal-purple-color);
+    }
+  }
+}
+
+@mixin flex-center($direction: row) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin font-styles($font-size, $font-weight) {
+  font-family: var(--instruments-sans-font), sans-serif;
+  font-size: $font-size;
+  font-weight: $font-weight;
+}

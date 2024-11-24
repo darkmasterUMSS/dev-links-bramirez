@@ -1,0 +1,44 @@
+@use "./publics/dev-links-mixins" as mixins;
+
+.links-custom-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: 100vh;
+  padding: 24px;
+
+  .links-custom-content {
+    display: flex;
+    gap: 24px;
+    height: 100%;
+    justify-content: space-between;
+
+    &-left {
+      background-color: var(--white-color);
+      border-radius: 12px;
+      height: 100%;
+      width: calc(40% - 12px);
+    }
+
+    &-right {
+      background-color: var(--white-color);
+      border-radius: 12px;
+      height: 100%;
+      width: calc(60% - 12px);
+
+      &-form {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        &-btn-add {
+          @include mixins.btn-secondary-colors;
+        }
+      }
+
+      &-btn-submit {
+
+      }
+    }
+  }
+}

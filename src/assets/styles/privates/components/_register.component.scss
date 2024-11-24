@@ -1,26 +1,19 @@
-:host {
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-}
+@use "./publics/dev-links-mixins" as mixins;
 
 .register-container {
-  display: flex;
-  flex-direction: column;
+  @include mixins.flex-center;
   gap: 51px;
-  width: 476px; //Make responsive
   height: 618px;
-  align-items: center;
+  width: 476px; //Make responsive
 
   .register-content {
+    background-color: var(--white-color);
     display: flex;
     flex-direction: column;
     gap: 40px;
-    background-color: var(--white-color);
     height: 100%;
-    width: 100%;
     padding: 40px;
+    width: 100%;
   }
 
   .register-form-container {
@@ -38,9 +31,7 @@
   }
 
   .register-form-message-error {
-    font-family: var(--instruments-sans-font), sans-serif;
-    font-size: 12px;
-    font-weight: 400;
+    @include mixins.font-styles(12px, 400);
     color: var(--steel-gray-color);
   }
 }

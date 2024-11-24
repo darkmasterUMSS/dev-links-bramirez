@@ -44,4 +44,8 @@ export class LinksCustomComponent {
   drop(event: CdkDragDrop<string[]>) {
     moveItemInArray(this.movies, event.previousIndex, event.currentIndex);
   }
+
+  addLink() {
+
+  }
 }

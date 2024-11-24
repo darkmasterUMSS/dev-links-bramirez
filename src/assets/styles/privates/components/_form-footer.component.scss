@@ -1,25 +1,23 @@
+@use "./publics/dev-links-mixins" as mixins;
+
 .form-footer-container {
-  display: flex;
-  align-items: center;
+  @include mixins.flex-center;
   gap: 2px;
   width: 100%;
-  justify-content: center;
 
   .form-footer-description, .form-footer-action {
-    font-family: var(--instruments-sans-font), sans-serif;
-    font-size: 16px;
-    font-weight: 400;
+    @include mixins.font-styles(16px, 400);
   }
 
   .form-footer-description {
-    color: #737373;
+    color: var(--steel-gray-color);
   }
 
   .form-footer-action {
+    background: none;
+    border: none;
     color: var(--royal-purple-color);
     cursor: pointer;
-    border: none;
-    background: none;
     padding: 0;
   }
 }

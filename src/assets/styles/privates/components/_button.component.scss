@@ -1,24 +1,22 @@
+@use "./publics/dev-links-mixins" as mixins;
+
 .btn-container {
-  align-items: center;
+  @include mixins.flex-center;
   background-color: var(--royal-purple-color);
   border-radius: 8px;
   border: none;
   cursor: pointer;
-  display: flex;
   gap: 8px;
   padding: 11px 27px 11px 27px;
   width: 100%;
-  justify-content: center;
 
   .btn-text {
+    @include mixins.font-styles(16px, 600);
     color: var(--white-color);
-    font-family: var(--instruments-sans-font), sans-serif;
-    font-size: 16px;
-    font-weight: 600;
   }
 
   &:disabled {
-    opacity: 0.5;
     cursor: not-allowed;
+    opacity: 0.5;
   }
 }

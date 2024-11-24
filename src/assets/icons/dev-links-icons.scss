@@ -27,27 +27,37 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.dev-links-icon-arrow {
+  &:before {
+    content: $dev-links-icon-arrow;
+  }
+}
+
 .dev-links-icon-candied {
   &:before {
     content: $dev-links-icon-candied;
   }
 }
+
 .dev-links-icon-codepen {
   &:before {
     content: $dev-links-icon-codepen;
   }
 }
+
 .dev-links-icon-codewars {
   &:before {
     content: $dev-links-icon-codewars;
   }
 }
+
 .dev-links-icon-devto .path1 {
   &:before {
     content: $dev-links-icon-devto-path1;
     color: rgb(115, 115, 115);
   }
 }
+
 .dev-links-icon-devto .path2 {
   &:before {
     content: $dev-links-icon-devto-path2;
@@ -55,6 +65,7 @@
     color: rgb(255, 255, 255);
   }
 }
+
 .dev-links-icon-devto .path3 {
   &:before {
     content: $dev-links-icon-devto-path3;
@@ -62,93 +73,105 @@
     color: rgb(255, 255, 255);
   }
 }
+
 .dev-links-icon-email {
   &:before {
     content: $dev-links-icon-email;
   }
 }
+
 .dev-links-icon-facebook {
   &:before {
     content: $dev-links-icon-facebook;
   }
 }
+
 .dev-links-icon-freecodecamp {
   &:before {
     content: $dev-links-icon-freecodecamp;
   }
 }
+
 .dev-links-icon-fronted-mentor {
   &:before {
     content: $dev-links-icon-fronted-mentor;
   }
 }
+
+.dev-links-icon-github {
+  &:before {
+    content: $dev-links-icon-github;
+  }
+}
+
 .dev-links-icon-gitlab {
   &:before {
     content: $dev-links-icon-gitlab;
   }
 }
+
 .dev-links-icon-hamburger {
   &:before {
     content: $dev-links-icon-hamburger;
   }
 }
+
 .dev-links-icon-hashnode {
   &:before {
     content: $dev-links-icon-hashnode;
   }
 }
+
 .dev-links-icon-line {
   &:before {
     content: $dev-links-icon-line;
   }
 }
+
 .dev-links-icon-linkedin {
   &:before {
     content: $dev-links-icon-linkedin;
   }
 }
+
 .dev-links-icon-list {
   &:before {
     content: $dev-links-icon-list;
   }
 }
+
 .dev-links-icon-picture {
   &:before {
     content: $dev-links-icon-picture;
   }
 }
+
 .dev-links-icon-profile {
   &:before {
     content: $dev-links-icon-profile;
   }
 }
+
 .dev-links-icon-stackoverflow {
   &:before {
     content: $dev-links-icon-stackoverflow;
   }
 }
+
 .dev-links-icon-twitch {
   &:before {
     content: $dev-links-icon-twitch;
   }
 }
+
 .dev-links-icon-url {
   &:before {
     content: $dev-links-icon-url;
   }
 }
+
 .dev-links-icon-youtube {
   &:before {
     content: $dev-links-icon-youtube;
-  }
-}
-.dev-links-icon-arrow {
-  &:before {
-    content: $dev-links-icon-arrow;
-  }
-}
-.dev-links-icon-github {
-  &:before {
-    content: $dev-links-icon-github;
   }
 }

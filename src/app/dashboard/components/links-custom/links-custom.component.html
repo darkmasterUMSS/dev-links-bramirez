@@ -18,6 +18,11 @@
                     subTitle="Add/edit/remove links below and then share all your profiles with the world!">
         </app-header>
 
+        <app-button class="links-custom-content-right-form-btn-add"
+                    title="Add new link"
+                    (onClickEvent)="addLink()">
+        </app-button>
+
         <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
           @for (movie of [1]; track movie) {
 <!--            <div class="example-box" cdkDrag>{{movie}}</div>-->

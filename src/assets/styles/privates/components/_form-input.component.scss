@@ -1,24 +1,24 @@
+@use "./publics/dev-links-mixins" as mixins;
+
 .form-input-container {
   display: flex;
   flex-direction: column;
   gap: 4px;
 
   .form-input-name {
-    font-family: var(--instruments-sans-font), sans-serif;
-    font-size: 12px;
-    font-weight: 400;
+    @include mixins.font-styles(12px, 400);
     color: var(--dark-gray-color);
   }
 
   .form-input-wrapper {
-    display: flex;
     align-items: center;
-    border: 1px solid var(--light-gray-color);
     border-radius: 8px;
+    border: 1px solid var(--light-gray-color);
+    display: flex;
 
     .form-input-icon {
-      font-size: 16px;
       color: var(--steel-gray-color);
+      font-size: 16px;
       padding: 12px 8px 12px 16px;
     }
 

@@ -1,0 +1,15 @@
+@use "./publics/dev-links-mixins" as mixins;
+
+.logo-container {
+  align-items: center;
+  display: flex;
+  gap: 7.5px;
+
+  .logo-img {
+    padding: 3.335px;
+  }
+
+  .logo-name {
+    @include mixins.font-styles(32px, 700);
+  }
+}

@@ -1,4 +1,4 @@
-import {Component, input, InputSignal} from '@angular/core';
+import {ChangeDetectionStrategy, Component, input, InputSignal, ViewEncapsulation} from '@angular/core';
 import {EMPTY_STRING} from "../../constants/constants";
 
 /**
@@ -9,7 +9,8 @@ import {EMPTY_STRING} from "../../constants/constants";
   standalone: true,
   imports: [],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent {
   public subTitle: InputSignal<string> = input<string>('');

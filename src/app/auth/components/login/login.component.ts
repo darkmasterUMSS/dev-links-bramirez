@@ -9,6 +9,7 @@ import {Router} from '@angular/router';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {FormErrorLabelDirective} from '../../../shared/directives/form-error.directive';
 import {CommonModule} from '@angular/common';
+import {EMPTY_STRING, LINKS_CUSTOM_PATH, REGISTER_PATH} from '../../../shared/constants/constants';
 
 /**
  * @author Bruno Ramirez
@@ -31,21 +32,19 @@ import {CommonModule} from '@angular/common';
 export class LoginComponent {
   public formBuilder: FormBuilder = inject(FormBuilder);
   public router: Router = inject(Router);
-  public submitted: boolean = false;
 
   public loginForm: FormGroup = this.formBuilder.group({
-    email: ['', [Validators.required, Validators.email]],
-    password: ['', [Validators.required]]
+    email: [EMPTY_STRING, [Validators.required, Validators.email]],
+    password: [EMPTY_STRING, [Validators.required]]
   });
 
   public readonly INPUT_TYPE: typeof InputType = InputType;
 
   public login(): void {
-    this.submitted = true;
-    console.log('Login', this.loginForm.value);
+    this.router.navigate([LINKS_CUSTOM_PATH]);
   }
 
   public navigateToRegister(): void {
-    this.router.navigate(['/auth/register']);
+    this.router.navigate([REGISTER_PATH]);
   }
 }
