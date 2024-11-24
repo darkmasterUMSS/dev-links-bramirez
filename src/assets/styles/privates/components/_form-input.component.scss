@@ -6,7 +6,7 @@
   gap: 4px;
 
   .form-input-name {
-    @include mixins.font-styles(12px, 400);
+    @include mixins.text-font-styles($font-size: 12px, $font-weight: 400);
     color: var(--dark-gray-color);
   }
 

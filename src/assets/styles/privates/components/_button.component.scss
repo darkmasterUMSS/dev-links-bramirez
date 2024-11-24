@@ -1,7 +1,7 @@
 @use "./publics/dev-links-mixins" as mixins;
 
 .btn-container {
-  @include mixins.flex-center;
+  @include mixins.flex-align-center($direction: row, $justify: center, $align: center);
   background-color: var(--royal-purple-color);
   border-radius: 8px;
   border: none;
@@ -11,7 +11,7 @@
   width: 100%;
 
   .btn-text {
-    @include mixins.font-styles(16px, 600);
+    @include mixins.text-font-styles($font-size: 16px, $font-weight: 600);
     color: var(--white-color);
   }
 

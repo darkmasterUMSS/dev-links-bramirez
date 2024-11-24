@@ -9,14 +9,14 @@
   }
 }
 
-@mixin flex-center($direction: row) {
+@mixin flex-align-center($direction, $justify, $align) {
+  align-items: $align;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: $direction;
+  justify-content: $justify;
 }
 
-@mixin font-styles($font-size, $font-weight) {
+@mixin text-font-styles($font-size, $font-weight) {
   font-family: var(--instruments-sans-font), sans-serif;
   font-size: $font-size;
   font-weight: $font-weight;

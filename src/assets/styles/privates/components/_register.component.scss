@@ -1,7 +1,7 @@
 @use "./publics/dev-links-mixins" as mixins;
 
 .register-container {
-  @include mixins.flex-center;
+  @include mixins.flex-align-center($direction: column, $justify: center, $align: center);
   gap: 51px;
   height: 618px;
   width: 476px; //Make responsive
@@ -31,7 +31,7 @@
   }
 
   .register-form-message-error {
-    @include mixins.font-styles(12px, 400);
+    @include mixins.text-font-styles($font-size: 12px, $font-weight: 400);
     color: var(--steel-gray-color);
   }
 }

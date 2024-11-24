@@ -1,18 +1,17 @@
+@use "./publics/dev-links-mixins" as mixins;
+
 .header-container {
   display: flex;
   flex-direction: column;
-  font-family: 'Instrument Sans', sans-serif;
   gap: 8px;
 
   .header-title {
-    font-size: 32px;
-    font-weight: 700;
-    color: #333333;
+    @include mixins.text-font-styles($font-size: 32px, $font-weight: 700);
+    color: var(--dark-gray-color);
   }
 
   .header-subtitle {
-    font-size: 16px;
-    font-weight: 400;
-    color: #737373;
+    @include mixins.text-font-styles($font-size: 16px, $font-weight: 400);
+    color: var(--steel-gray-color);
   }
 }

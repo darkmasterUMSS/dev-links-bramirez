@@ -15,7 +15,7 @@
         description="Email address"
         name="email"
         placeholder="e.g.alex@email.com"
-        [type]="INPUT_TYPE.Email"
+        type="email"
         formControlName="email">
       </app-form-input>
       <span
@@ -30,7 +30,7 @@
         description="Password"
         name="password"
         placeholder="Enter your password"
-        [type]="INPUT_TYPE.Password"
+        type="password"
         formControlName="password">
       </app-form-input>
       <span
@@ -47,7 +47,7 @@
 
       <app-form-footer description="Don’t have an account?"
                        action="Create account"
-                       (onClickEvent)="navigateToRegister()">
+                       (onClickEvent)="goToRegister()">
       </app-form-footer>
     </form>
   </section>

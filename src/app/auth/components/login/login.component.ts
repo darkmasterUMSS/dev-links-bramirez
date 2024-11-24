@@ -3,7 +3,6 @@ import {LogoComponent} from "../../../shared/components/logo/logo.component";
 import {FormInputComponent} from "../../../shared/components/form-input/form-input.component";
 import {HeaderComponent} from "../../../shared/components/header/header.component";
 import {ButtonComponent} from "../../../shared/components/button/button.component";
-import {InputType} from "../../../shared/enums/input-type.enum";
 import {FormFooterComponent} from '../../../shared/components/form-footer/form-footer.component';
 import {Router} from '@angular/router';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
@@ -38,13 +37,11 @@ export class LoginComponent {
     password: [EMPTY_STRING, [Validators.required]]
   });
 
-  public readonly INPUT_TYPE: typeof InputType = InputType;
-
   public login(): void {
     this.router.navigate([LINKS_CUSTOM_PATH]);
   }
 
-  public navigateToRegister(): void {
+  public goToRegister(): void {
     this.router.navigate([REGISTER_PATH]);
   }
 }

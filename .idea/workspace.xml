@@ -8,29 +8,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c9f4b2b-4f9d-4fa3-adcc-4e85b25e430c" name="Default Changelist" comment="add icomoon in project and creation components for test of routes">
-      <change afterPath="$PROJECT_DIR$/src/assets/styles/publics/_dev-links-mixins.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/auth/components/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/auth/components/login/login.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/auth/components/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/auth/components/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/dashboard/components/links-custom/links-custom.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/components/links-custom/links-custom.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/dashboard/components/links-custom/links-custom.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/components/links-custom/links-custom.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shared/components/button/button.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/components/button/button.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shared/constants/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/constants/constants.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/dev-links-styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/dev-links-styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/privates/components/button.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/privates/components/_button.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/privates/components/form-footer.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/privates/components/_form-footer.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/privates/components/form-input.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/privates/components/_form-input.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/privates/components/links-card.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/privates/components/_links-card.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/privates/components/links-custom.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/privates/components/_links-custom.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/privates/components/links-preview.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/privates/components/_links-preview.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/privates/components/login.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/privates/components/_login.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/privates/components/logo.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/privates/components/_logo.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/privates/components/navbar.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/privates/components/_navbar.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/privates/components/register.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/privates/components/_register.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/privates/dev-links-components.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/privates/dev-links-components.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/publics/dev-links-colors-variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/publics/_dev-links-colors-variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/publics/dev-links-fonts-variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/publics/_dev-links-fonts-variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth/components/register/register.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/auth/components/register/register.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth/components/register/register.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/auth/components/register/register.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/components/form-footer/form-footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/components/form-footer/form-footer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/components/form-input/form-input.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/components/form-input/form-input.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/enums/input-type.enum.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/styles/privates/components/_button.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/privates/components/_button.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/styles/privates/components/_form-footer.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/privates/components/_form-footer.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/styles/privates/components/_form-input.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/privates/components/_form-input.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/styles/privates/components/_header.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/privates/components/_header.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/styles/privates/components/_links-card.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/privates/components/_links-card.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/styles/privates/components/_login.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/privates/components/_login.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/styles/privates/components/_logo.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/privates/components/_logo.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/styles/privates/components/_register.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/privates/components/_register.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/styles/publics/_dev-links-mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/publics/_dev-links-mixins.scss" afterDir="false" />
     </list>
     <list id="97e9e371-5acd-4084-83a9-f0ab2b574476" name="Add configuration in angular json for work with files .scss and creation routes main" comment="" />
     <list id="44cfdc4c-a0b5-4888-a9f4-591d64314b84" name="add icomoon in project and creation components for test of routes" comment="" />
@@ -164,6 +158,18 @@
       </map>
     </option>
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "darkmasterUMSS"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/darkmasterUMSS/dev-links-bramirez.git",
+    "accountId": "c66bb8ad-ad0c-4805-a0ef-66241bb74cb7"
+  }
+}]]></component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -473,7 +479,7 @@
       <workItem from="1732241657346" duration="11695000" />
       <workItem from="1732373107767" duration="25008000" />
       <workItem from="1732421167898" duration="1860000" />
-      <workItem from="1732452012052" duration="10031000" />
+      <workItem from="1732452012052" duration="13922000" />
     </task>
     <task id="LOCAL-00001" summary="Add configuration in angular json for work with files .scss and creation routes main">
       <created>1731874467932</created>

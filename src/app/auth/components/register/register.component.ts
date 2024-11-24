@@ -4,9 +4,9 @@ import {FormFooterComponent} from "../../../shared/components/form-footer/form-f
 import {FormInputComponent} from "../../../shared/components/form-input/form-input.component";
 import {HeaderComponent} from "../../../shared/components/header/header.component";
 import {LogoComponent} from "../../../shared/components/logo/logo.component";
-import {InputType} from '../../../shared/enums/input-type.enum';
 import {Router} from '@angular/router';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
+import {EMPTY_STRING, LOGIN_PATH} from '../../../shared/constants/constants';
 
 /**
  * @author Bruno Ramirez
@@ -38,17 +38,15 @@ export class RegisterComponent {
   public router: Router = inject(Router);
 
   public registerForm: FormGroup = this.formBuilder.group({
-    email: ['', [Validators.required, Validators.email]],
-    password: ['', [Validators.required, Validators.minLength(3)]]
+    email: [EMPTY_STRING, [Validators.required, Validators.email]],
+    password: [EMPTY_STRING, [Validators.required, Validators.minLength(3)]]
   });
-
-  public readonly INPUT_TYPE: typeof InputType = InputType;
 
   public createNewAccount(): void {
 
   }
 
   public navigateToLogin(): void {
-    this.router.navigate(['/auth/login']);
+    this.router.navigate([LOGIN_PATH]);
   }
 }

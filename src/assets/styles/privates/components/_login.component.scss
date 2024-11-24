@@ -1,9 +1,7 @@
 @use "./publics/dev-links-mixins" as mixins;
 
 .login-container {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
+  @include mixins.flex-align-center($direction: column, $justify: center, $align: center);
   gap: 51px;
   height: 573px;
   width: 476px; //Make responsive
@@ -33,7 +31,7 @@
   }
 
   .login-form-message-error {
-    @include mixins.font-styles(12px, 400);
+    @include mixins.text-font-styles($font-size: 12px, $font-weight: 400);
     color: var(--red-color);
   }
 }

@@ -20,13 +20,13 @@
       }
 
       .links-card-title {
-        @include mixins.font-styles(16px, 700);
+        @include mixins.text-font-styles($font-size: 16px, $font-weight: 700);
         color: var(--steel-gray-color);
       }
     }
 
     .links-card-btn-remove {
-      @include mixins.font-styles(16px, 400);
+      @include mixins.text-font-styles($font-size: 16px, $font-weight: 400);
       background: none;
       border: none;
       color: var(--steel-gray-color);
@@ -40,7 +40,7 @@
     gap: 4px;
 
     &-text {
-      @include mixins.font-styles(12px, 400);
+      @include mixins.text-font-styles($font-size: 12px, $font-weight: 400);
       color: var(--dark-gray-color);
     }
 

@@ -1,12 +1,12 @@
 @use "./publics/dev-links-mixins" as mixins;
 
 .form-footer-container {
-  @include mixins.flex-center;
+  @include mixins.flex-align-center($direction: row, $align: center, $justify: center);
   gap: 2px;
   width: 100%;
 
   .form-footer-description, .form-footer-action {
-    @include mixins.font-styles(16px, 400);
+    @include mixins.text-font-styles($font-size: 16px, $font-weight: 400);
   }
 
   .form-footer-description {

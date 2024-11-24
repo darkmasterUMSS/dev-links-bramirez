@@ -1,5 +1,4 @@
 import {ChangeDetectionStrategy, Component, forwardRef, input, InputSignal, ViewEncapsulation} from '@angular/core';
-import {InputType} from "../../enums/input-type.enum";
 import {ControlValueAccessor, NG_VALUE_ACCESSOR, ReactiveFormsModule} from '@angular/forms';
 
 /**
@@ -28,7 +27,7 @@ export class FormInputComponent implements ControlValueAccessor {
   public iconPath: InputSignal<string> = input<string>('');
   public name: InputSignal<string> = input.required<string>();
   public placeholder: InputSignal<string> = input.required<string>();
-  public type: InputSignal<InputType> = input.required<InputType>();
+  public type: InputSignal<string> = input.required<string>();
 
   public disabled: boolean = false;
   public value: any = '';
@@ -50,7 +49,6 @@ export class FormInputComponent implements ControlValueAccessor {
   public handleInput(event: Event): void {
     const target = event.target as HTMLInputElement;
     this.value = target.value;
-    console.log('this.value', this.value);
     this.onChange(target.value);
   }
 
