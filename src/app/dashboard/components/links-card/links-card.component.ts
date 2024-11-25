@@ -1,52 +1,35 @@
-import {ChangeDetectionStrategy, Component, ViewEncapsulation} from '@angular/core';
+import {ChangeDetectionStrategy, Component, input, InputSignal, ViewEncapsulation} from '@angular/core';
+import {PLATFORM_NAMES} from '../../../shared/constants/constants';
+import {FormInputComponent} from '../../../shared/components/form-input/form-input.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-links-card',
   standalone: true,
-  imports: [],
+  imports: [
+    FormInputComponent,
+    FormsModule,
+    ReactiveFormsModule
+  ],
   templateUrl: './links-card.component.html',
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LinksCardComponent {
+  public selectedPlatform: string = 'github';
+  public isVisiblePlatformOptions: boolean = true;
+  public numberCard: InputSignal<number> = input<number>(1);
 
+  public readonly PLATFORM_NAMES: string[] = PLATFORM_NAMES;
 
-  ngAfterViewInit() {
-    document.querySelectorAll(".custom-select").forEach((dropdown) => {
-      const trigger = dropdown.querySelector(".custom-select-trigger")!;
-      const options = dropdown.querySelectorAll(".custom-option")!;
-
-      // Toggle el dropdown
-      trigger.addEventListener("click", () => {
-        dropdown.classList.toggle("active");
-      });
-
-      // Selección de opciones
-      options.forEach((option) => {
-        option.addEventListener("click", () => {
-          const selectedValue = option.getAttribute("data-value");
-          const selectedText = option.innerHTML;
-
-          // Actualiza el trigger con la opción seleccionada
-          trigger.innerHTML = selectedText + '<span class="custom-select-arrow"></span>';
-
-          // Cierra el dropdown
-          dropdown.classList.remove("active");
-        });
-      });
-    });
-
-// Cerrar dropdown al hacer clic fuera
-    window.addEventListener("click", (e) => {
-      const target = e.target as HTMLElement; // Aseguramos que target es un HTMLElement
-      if (target.classList.contains("my-class")) {
-        console.log("Clicked on an element with class 'my-class'");
-      }
-    });
-
-
+  public removeLink(): void {
   }
-  removeLink() {
 
+  public selectOption(optionName: string): void {
+    this.selectedPlatform = optionName;
+  }
+
+  public toggleVisibilityPlatformOptions(): void {
+    this.isVisiblePlatformOptions = !this.isVisiblePlatformOptions;
   }
 }

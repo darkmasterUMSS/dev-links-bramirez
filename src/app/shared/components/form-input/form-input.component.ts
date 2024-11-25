@@ -23,7 +23,7 @@ import {ControlValueAccessor, NG_VALUE_ACCESSOR, ReactiveFormsModule} from '@ang
 })
 export class FormInputComponent implements ControlValueAccessor {
   public description: InputSignal<string> = input<string>('');
-  public formControlName: InputSignal<any> = input.required<any>();
+  public formControlName: InputSignal<any> = input<any>();
   public iconPath: InputSignal<string> = input<string>('');
   public name: InputSignal<string> = input.required<string>();
   public placeholder: InputSignal<string> = input.required<string>();

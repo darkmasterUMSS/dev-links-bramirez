@@ -21,3 +21,22 @@
   font-size: $font-size;
   font-weight: $font-weight;
 }
+
+@mixin icon-styles($after-content) {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  &::before, &::after {
+    color: var(--steel-gray-color);
+  }
+
+  &::before {
+    font-size: 14px;
+  }
+
+  &::after {
+    content: $after-content;
+    @include text-font-styles($font-size: 16px, $font-weight: 400);
+  }
+}

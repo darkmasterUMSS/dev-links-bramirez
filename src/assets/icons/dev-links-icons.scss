@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?smkzca');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?smkzca#iefix') format('embedded-opentype'),
-  url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?smkzca') format('truetype'),
-  url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?smkzca') format('woff'),
-  url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?smkzca##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?phmaaa');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?phmaaa#iefix') format('embedded-opentype'),
+  url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?phmaaa') format('truetype'),
+  url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?phmaaa') format('woff'),
+  url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?phmaaa##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -51,26 +51,9 @@
   }
 }
 
-.dev-links-icon-devto .path1 {
+.dev-links-icon-devto {
   &:before {
-    content: $dev-links-icon-devto-path1;
-    color: rgb(115, 115, 115);
-  }
-}
-
-.dev-links-icon-devto .path2 {
-  &:before {
-    content: $dev-links-icon-devto-path2;
-    margin-left: -1em;
-    color: rgb(255, 255, 255);
-  }
-}
-
-.dev-links-icon-devto .path3 {
-  &:before {
-    content: $dev-links-icon-devto-path3;
-    margin-left: -1em;
-    color: rgb(255, 255, 255);
+    content: $dev-links-icon-devto;
   }
 }
 
@@ -122,21 +105,9 @@
   }
 }
 
-.dev-links-icon-line {
-  &:before {
-    content: $dev-links-icon-line;
-  }
-}
-
 .dev-links-icon-linkedin {
   &:before {
     content: $dev-links-icon-linkedin;
-  }
-}
-
-.dev-links-icon-list {
-  &:before {
-    content: $dev-links-icon-list;
   }
 }
 
@@ -152,6 +123,12 @@
   }
 }
 
+.dev-links-icon-select {
+  &:before {
+    content: $dev-links-icon-select;
+  }
+}
+
 .dev-links-icon-stackoverflow {
   &:before {
     content: $dev-links-icon-stackoverflow;
@@ -161,6 +138,12 @@
 .dev-links-icon-twitch {
   &:before {
     content: $dev-links-icon-twitch;
+  }
+}
+
+.dev-links-icon-twitter {
+  &:before {
+    content: $dev-links-icon-twitter;
   }
 }
 
@@ -175,3 +158,4 @@
     content: $dev-links-icon-youtube;
   }
 }
+

@@ -16,3 +16,20 @@ export const LINKS_PREVIEW_PATH: string = `${DASHBOARD}/${LINKS_PREVIEW}`;
 export const PROFILE_PATH: string = `${DASHBOARD}/${PROFILE}`;
 export const LOGIN_PATH: string = `${AUTH}/${LOGIN}`;
 export const REGISTER_PATH: string = `${AUTH}/${REGISTER}`;
+
+export const PLATFORM_NAMES: string[] = [
+  'github',
+  'fronted-mentor',
+  'twitter',
+  'linkedin',
+  'youtube',
+  'facebook',
+  'twitch',
+  'devto',
+  'codewars',
+  'codepen',
+  'freecodecamp',
+  'gitlab',
+  'hashnode',
+  'stackoverflow',
+];

@@ -1,9 +1,13 @@
 @use "./publics/dev-links-mixins" as mixins;
+@use "./publics/dev-links-icons-variables" as icons;
 
 .links-card-container {
+  background-color: var(--fog-gray-color);
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  padding: 20px;
   width: 100%;
 
   .links-card-header {
@@ -45,81 +49,79 @@
     }
 
     &-select {
+      position: relative;
+      width: 100%;
+    }
 
+    &-checked {
+      align-items: center;
+      border-radius: 8px;
+      border: 1px solid var(--light-gray-color);
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 8px 12px 16px;
+
+      .dev-links-icon-select {
+        color: var(--royal-purple-color);
+        cursor: pointer;
+        font-size: 22px;
+      }
     }
 
     &-options {
+      background-color: var(--white-color);
+      border-radius: 8px;
+      border: 1px solid var(--light-gray-color);
+      cursor: pointer;
+      list-style-type: none;
+      margin-top: 16px;
+      padding: 0;
+      position: absolute;
       width: 100%;
+
+      &-item {
+        padding: 12px 16px 12px 16px;
+
+        &:hover {
+          background-color: var(--lavender-mist-color);
+        }
+      }
+
+      hr {
+        border: 1px solid var(--light-gray-color);
+        margin: 0 14px;
+      }
+    }
+
+    @each $key, $value in icons.$icons-map {
+      .dev-links-icon-#{$key} {
+        @include mixins.icon-styles($after-content: $value);
+      }
+    }
+
+    .dev-links-icon-devto {
+      &:before {
+        font-size: 20px;
+        margin: -3px;
+      }
+    }
+  }
+
+  .links-card-url {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    .dev-links-icon-url {
+      background-color: var(--white-color);
+    }
+
+    .form-input {
+      border-radius: 8px;
+
+      &::placeholder {
+        @include mixins.text-font-styles($font-size: 16px, $font-weight: 400);
+      }
     }
   }
 }
-
-/* Contenedor del dropdown */
-.custom-select {
-  position: relative;
-  width: 100%;
-  max-width: 300px;
-  cursor: pointer;
-  font-family: Arial, sans-serif;
-}
-
-/* Trigger para mostrar el valor seleccionado */
-.custom-select-trigger {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 15px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 14px;
-  color: #333;
-}
-
-.custom-select-arrow {
-  width: 0;
-  height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 5px solid #737373;
-  margin-left: 10px;
-}
-
-/* Opciones ocultas inicialmente */
-.custom-options {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-  overflow: hidden;
-}
-
-.custom-option {
-  display: flex;
-  align-items: center;
-  padding: 10px 15px;
-  font-size: 14px;
-  color: #333;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.custom-option:hover {
-  background-color: #f5f5f5;
-}
-
-/* Mostrar opciones cuando está activo */
-.custom-select.active .custom-options {
-  display: block;
-}
-
-.custom-option span {
-  margin-right: 10px;
-}
-

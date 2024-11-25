@@ -19,17 +19,18 @@
         </app-header>
 
         <app-button class="links-custom-content-right-form-btn-add"
-                    title="Add new link"
+                    title="+ Add new link"
                     (onClickEvent)="addLink()">
         </app-button>
 
-        <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
-          @for (movie of [1]; track movie) {
-<!--            <div class="example-box" cdkDrag>{{movie}}</div>-->
+        <app-links-card class="example-box"></app-links-card>
 
-            <app-links-card class="example-box" cdkDrag></app-links-card>
-          }
-        </div>
+<!--        <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">-->
+<!--          @for (movie of [1]; track movie) {-->
+<!--&lt;!&ndash;            <div class="example-box" cdkDrag>{{movie}}</div>&ndash;&gt;-->
+
+<!--          }-->
+<!--        </div>-->
       </div>
 
       <app-button class="links-custom-content-right-btn-submit"
