@@ -3,37 +3,27 @@
 
   <section class="links-custom-content">
     <div class="links-custom-content-left">
-      <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
-        @for (movie of movies; track movie) {
-<!--          <div class="example-box" cdkDrag>{{movie}}</div>-->
-
-<!--          <app-links-card class="example-box" cdkDrag></app-links-card>-->
-        }
-      </div>
     </div>
 
     <div class="links-custom-content-right">
-      <div class="links-custom-content-right-form">
+      <div class="links-custom-content-right-customize-wrapper">
         <app-header title="Customize your links"
                     subTitle="Add/edit/remove links below and then share all your profiles with the world!">
         </app-header>
 
-        <app-button class="links-custom-content-right-form-btn-add"
+        <app-button class="links-custom-content-right-customize-wrapper-btn-add"
                     title="+ Add new link"
                     (onClickEvent)="addLink()">
         </app-button>
 
-        <app-links-card class="example-box"></app-links-card>
-
-<!--        <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">-->
-<!--          @for (movie of [1]; track movie) {-->
-<!--&lt;!&ndash;            <div class="example-box" cdkDrag>{{movie}}</div>&ndash;&gt;-->
-
-<!--          }-->
-<!--        </div>-->
+        <div class="links-custom-content-right-cards">
+          @for (link of links; track link; let index = $index) {
+            <app-links-card class="links-custom-content-right-cards-item" [numberCard]="index + 1"></app-links-card>
+          }
+        </div>
       </div>
 
-      <app-button class="links-custom-content-right-btn-submit"
+      <app-button class="links-custom-content-right-btn-save"
                   title="Save"
                   (onClickEvent)="saveLinks()">
       </app-button>

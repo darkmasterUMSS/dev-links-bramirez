@@ -2,7 +2,6 @@ import {ChangeDetectionStrategy, Component, ViewEncapsulation} from '@angular/co
 import {NavbarComponent} from '../../../shared/components/navbar/navbar.component';
 import {HeaderComponent} from '../../../shared/components/header/header.component';
 import {ButtonComponent} from '../../../shared/components/button/button.component';
-import {CdkDrag, CdkDragDrop, CdkDropList, moveItemInArray} from '@angular/cdk/drag-drop';
 import {LinksCardComponent} from '../links-card/links-card.component';
 
 /**
@@ -15,8 +14,6 @@ import {LinksCardComponent} from '../links-card/links-card.component';
     NavbarComponent,
     HeaderComponent,
     ButtonComponent,
-    CdkDropList,
-    CdkDrag,
     LinksCardComponent
   ],
   templateUrl: './links-custom.component.html',
@@ -24,28 +21,11 @@ import {LinksCardComponent} from '../links-card/links-card.component';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LinksCustomComponent {
+  links: any = ['123'];
 
   public saveLinks(): void {
-
   }
 
-  movies = [
-    'Episode I - The Phantom Menace',
-    'Episode II - Attack of the Clones',
-    'Episode III - Revenge of the Sith',
-    'Episode IV - A New Hope',
-    'Episode V - The Empire Strikes Back',
-    'Episode VI - Return of the Jedi',
-    'Episode VII - The Force Awakens',
-    'Episode VIII - The Last Jedi',
-    'Episode IX – The Rise of Skywalker',
-  ];
-
-  drop(event: CdkDragDrop<string[]>) {
-    moveItemInArray(this.movies, event.previousIndex, event.currentIndex);
-  }
-
-  addLink() {
-
+  public addLink(): void {
   }
 }

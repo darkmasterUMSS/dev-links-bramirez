@@ -30,17 +30,21 @@
       padding: 40px;
       width: calc(60% - 12px);
 
-      &-form {
+      &-customize-wrapper {
         display: flex;
         flex-direction: column;
         gap: 40px;
 
         &-btn-add {
           @include mixins.btn-secondary-colors;
+
+          .btn-container {
+            background-color: var(--lavender-mist-color);
+          }
         }
       }
 
-      &-btn-submit {
+      &-btn-save {
         display: flex;
         justify-content: flex-end;
         padding: 24px 40px;
